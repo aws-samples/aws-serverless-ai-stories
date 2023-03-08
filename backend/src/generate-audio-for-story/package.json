@@ -1,0 +1,19 @@
+{
+  "name": "generate audio for story",
+  "version": "1.0.0",
+  "description": "Creates audio for stories using Amazon Polly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-dynamodb": "^3.267.0",
+    "@aws-sdk/client-polly": "^3.278.0",
+    "@aws-sdk/util-dynamodb": "^3.261.0",
+    "@types/aws-lambda": "^8.10.110",
+    "@aws-sdk/client-s3": "^3.278.0",
+    "@aws-sdk/s3-request-presigner": "^3.278.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "stage": "stg",
+  "email": "XXXXX",
+  "bedtimeCron": "cron(15 19 * * ? *)"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "aws-serverless-ai-stories",
+  "version": "1.0.0",
+  "description": "Example AWS Serverless application using ChatGPT and DALL-E to generate children stories on cron jobs",
+  "scripts": {
+    "start:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm i && cd ../ && cd frontend && npm i",
+    "deploy": "cd backend && cdk deploy --all",
+    "populate-db": "node backend/scripts/insert-data-into-ddb.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
