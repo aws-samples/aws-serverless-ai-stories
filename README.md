@@ -1,7 +1,9 @@
 <div align="center">
 
 <h1>📖 AI Generated Stories</h1>
-<p>Example open source event-driven application that generates a new bed time story for your children every night using Lambda, EventBridge, DynamoDB, App Runner, ChatGPT and DALL-E.</>
+<p>Example open source event-driven application that generates a new bed time story for your children every night using Lambda, EventBridge, DynamoDB, App Runner, ChatGPT and DALL-E.</p>
+
+<p><a href="https://aws-blogs-prod.amazon.com/compute/implementing-an-event-driven-serverless-story-generation-application-with-chatgpt-and-dall-e/">Read the blog post &rarr;</a></p>
 
 
 <hr />
