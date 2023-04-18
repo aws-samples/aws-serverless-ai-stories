@@ -5,7 +5,7 @@
   "scripts": {
     "start:frontend": "cd frontend && npm run dev",
     "install:all": "cd backend && npm i && cd ../frontend && npm i && cd ../backend/src/create-story && npm i && cd ../../../backend/src/generate-audio-for-story && npm i && cd ../../../backend/src/generate-images-for-story && npm i && cd ../../../frontend && touch .env",
-    "deploy": "cd backend && cdk deploy --all",
+    "deploy": "cd backend && ./node_modules/.bin/cdk deploy --all",
     "populate-db": "node backend/scripts/insert-data-into-ddb.js"
   },
   "keywords": [],
