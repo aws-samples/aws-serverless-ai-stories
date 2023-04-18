@@ -1,8 +1,7 @@
 [
-    { "id": "1", "description": "Deep dark woods surrounded by small friendly monsters" },
-    { "id": "2", "description": "On the planet mars where the characters are lost and need to find a way home" },
-    { "id": "3", "description": "Characters are at school and want a way to play computer games rather than doing work" },
-    { "id": "4", "description": "Characters are at the best theme park in the world" },
-    { "id": "5", "description": "Characters camping in the forest and hear strange noises and go to investigate" }
+    { "id": "1", "description": "Live on a twitch stream and something goes wrong" },
+    { "id": "2", "description": "In a serverless workshop but the internet cuts out" },
+    { "id": "3", "description": "Doing a live talk and the building gets struck by lightning" },
+    { "id": "4", "description": "Pair programming but they get distracted by something scary" }
   ]
   
