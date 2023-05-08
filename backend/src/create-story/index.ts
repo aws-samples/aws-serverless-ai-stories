@@ -42,6 +42,7 @@ export async function handler() {
     })
   );
 
+  // Select random scene
   const selectedScene = unmarshall(scenes[Math.floor(Math.random() * scenes.length)]);
 
   const prompt = `

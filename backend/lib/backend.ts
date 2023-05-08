@@ -128,7 +128,7 @@ export class BackendStack extends cdk.Stack {
       })
     );
 
-    // Create schedule that will run every day at bed time.
+    // Create schedule that will run every day at bed time, this triggers the
     new CfnSchedule(this, 'my-schedule', {
       flexibleTimeWindow: {
         mode: 'OFF',
@@ -173,8 +173,8 @@ export class BackendStack extends cdk.Stack {
         actions: ['dynamodb:DescribeStream', 'dynamodb:GetRecords', 'dynamodb:GetShardIterator', 'dynamodb:ListStreams'],
       })
     );
-
-    // generatedStories.grantStreamRead(pipeRole);
+    
+    // Give EventBridge Pipes permission to raise events on the bus
     storiesEventBus.grantPutEventsTo(pipeRole);
 
     new CfnPipe(this, 'NewStoryPipe', {
@@ -184,6 +184,7 @@ export class BackendStack extends cdk.Stack {
       // source: generatedStories.tableStreamArn,
       target: storiesEventBus.eventBusArn,
 
+      // Map the DynamoDB event into an event our domain can understand.
       targetParameters: {
         eventBridgeEventBusParameters: {
           detailType: 'StoryGenerated',
@@ -201,6 +202,7 @@ export class BackendStack extends cdk.Stack {
           startingPosition: StartingPosition.LATEST,
           batchSize: 1,
         },
+        // Filter DynamoDB events, only interested in new events
         filterCriteria: {
           filters: [
             {
