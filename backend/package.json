@@ -25,7 +25,7 @@
     "@aws-cdk/aws-amplify": "^1.195.0",
     "@aws-cdk/aws-amplify-alpha": "^2.29.1-alpha.0",
     "@aws-cdk/aws-apprunner": "^1.195.0",
-    "@aws-sdk/client-dynamodb": "^3.267.0",
+    "@aws-sdk/client-dynamodb": "^3.350.0",
     "@aws-sdk/util-dynamodb": "^3.267.0",
     "aws-cdk-lib": "2.64.0",
     "constructs": "^10.0.0",
