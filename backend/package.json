@@ -27,7 +27,7 @@
     "@aws-cdk/aws-apprunner": "^1.195.0",
     "@aws-sdk/client-dynamodb": "^3.267.0",
     "@aws-sdk/util-dynamodb": "^3.267.0",
-    "aws-cdk-lib": "2.64.0",
+    "aws-cdk-lib": "2.80.0",
     "constructs": "^10.0.0",
     "openai": "^3.2.1",
     "source-map-support": "^0.5.21",
