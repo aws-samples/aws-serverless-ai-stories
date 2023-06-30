@@ -22,6 +22,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Create env file
+        working-directory: frontend
+        run: |
+          touch .env
+          echo ACCESS_KEY="test" >> .env
+          echo SECRET_KEY="test" >> .env
+          echo REGION="test" >> .env
+          echo TABLE_NAME="" >> .env
+          cat .env
+
       - name: Install dependencies
         working-directory: frontend
         run: npm ci

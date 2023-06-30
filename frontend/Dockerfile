@@ -43,4 +43,3 @@ ENV NEXT_TELEMETRY_DISABLED 1
  
 CMD ["node_modules/.bin/next", "start"]
 # ENTRYPOINT ["npm", "start"]
-
