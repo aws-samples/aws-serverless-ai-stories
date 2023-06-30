@@ -32,7 +32,6 @@ jobs:
 
       - name: Build Docker image
         uses: docker/build-push-action@v2
-        working-directory: frontend
         with:
-          context: .
+          context: frontend/.
           push: false
