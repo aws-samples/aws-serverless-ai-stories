@@ -1,0 +1,38 @@
+name: Build and Dockerize
+
+on:
+  push:
+    paths:
+      - 'frontend/**' # Trigger workflow on changes in the frontend folder
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [19.x] # Define the Node.js versions to build for
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        working-directory: frontend
+        with:
+          context: .
+          push: false
